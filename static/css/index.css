@@ -1,5 +1,106 @@
+
+
 body {
   font-family: 'Noto Sans', sans-serif;
+  font-size: 22px; /* 调整全局字体大小 */
+}
+
+
+.single-image-section {
+  padding: 2rem 1rem; /* 增加上下内边距 */
+  background-color: #f9f9f9; /* 设置淡背景以区分其他部分 */
+  text-align: center; /* 确保内容居中 */
+}
+
+.single-image-section .single-image {
+  max-width: 100%; /* 确保图片自适应容器宽度 */
+  height: auto; /* 保持图片比例 */
+  margin-bottom: 1rem; /* 图片与文字间距 */
+}
+
+.single-image-section .caption {
+  font-size: 1.2rem; /* 设置较大的字体 */
+  line-height: 1.5; /* 提高文字的可读性 */
+  color: #555; /* 设置文字颜色 */
+  margin-top: 0.5rem; /* 图片和说明之间的间距 */
+}
+
+.single-image-section .container {
+  max-width: 100%; /* 移除宽度限制 */
+  width: 100%; /* 确保容器宽度占满页面 */
+}
+
+.single-image-section .column {
+  max-width: 100%; /* 移除列的宽度限制 */
+  width: 100%; /* 确保列宽度占满容器 */
+}
+
+
+h1, h2, h3 {
+  font-size: inherit; /* 确保标题与全局字体比例一致 */
+}
+
+h1 {
+  font-size: 2.5rem; /* 一级标题更大 */
+}
+
+h2 {
+  font-size: 2rem; /* 二级标题稍小 */
+}
+
+h3 {
+  font-size: 1.75rem; /* 三级标题 */
+}
+
+
+#dataset-info {
+  background-color: #f9f9f9; /* 背景颜色 */
+  padding: 2rem 1rem; /* 内边距 */
+  border-radius: 8px; /* 圆角 */
+  margin-bottom: 2rem; /* 与下方元素的间距 */
+}
+
+#dataset-info h2 {
+  margin-bottom: 1rem;
+  color: #333; /* 标题颜色 */
+}
+
+#dataset-info ul {
+  list-style: disc inside;
+  margin-top: 1rem;
+}
+
+#dataset-info ul li a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+#dataset-info ul li a:hover {
+  text-decoration: underline;
+}
+
+
+
+.navbar-menu {
+  display: flex; /* 使用 Flexbox 布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直方向居中 */
+  width: 100%; /* 确保导航栏占满宽度 */
+}
+
+.navbar-start {
+  display: flex; /* 确保子元素也使用 Flexbox */
+  gap: 15px; /* 设置导航项间距 */
+  margin: 0 auto; /* 水平居中 */
+  justify-content: center; /* 强制居中对齐子项 */
+}
+
+.navbar-menu.align-left {
+  justify-content: flex-start; /* 左对齐 */
+}
+
+.navbar-menu.align-right {
+  justify-content: flex-end; /* 右对齐 */
 }
 
 
@@ -112,13 +213,22 @@ body {
 
 .results-carousel {
   overflow: hidden;
+ 
 }
 
-.results-carousel .item {
-  margin: 5px;
-  overflow: hidden;
-  padding: 20px;
-  font-size: 0;
+#results-carousel .item {
+  display: flex; /* 使用 Flexbox 布局 */
+  flex-direction: column; /* 子元素按列排列 */
+  align-items: center; /* 水平方向居中 */
+  justify-content: center; /* 垂直方向居中 */
+  text-align: center; /* 确保文本居中 */
+  margin: 2 auto; /* 防止外部边距干扰 */
+}
+
+#results-carousel img {
+  max-width: 100%; /* 防止图片超出容器 */
+  height: auto; /* 保持图片比例 */
+  margin-bottom: 1rem; /* 增加图片与标题的间距 */
 }
 
 .results-carousel video {
