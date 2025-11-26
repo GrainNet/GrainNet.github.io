@@ -243,5 +243,72 @@ h3 {
   font-size: smaller;
 }
 
+/* Open-source plan - horizontal layout */
+.open-source-plan {
+  margin-top: 1.5rem;
+}
 
+.open-source-plan-timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto 0;
+  max-width: 900px;
+}
 
+.open-source-plan-item {
+  flex: 1 1 260px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(10, 10, 10, 0.08);
+  padding: 1.25rem 1.5rem;
+}
+
+.open-source-plan-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 3px solid #23d160; /* Bulma success color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #23d160;
+  margin-bottom: 0.75rem;
+}
+
+.open-source-plan-icon.is-planned {
+  border-color: #209cee; /* Bulma info color */
+  color: #209cee;
+}
+
+.open-source-plan-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.open-source-plan-phase {
+  font-size: 1.05rem;
+}
+
+.open-source-plan-status {
+  font-size: 0.8rem;
+}
+
+.open-source-plan-text {
+  font-size: 0.95rem;
+  margin-top: 0.35rem;
+}
+
+.open-source-plan-arrow {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #b5b5b5;
+}
