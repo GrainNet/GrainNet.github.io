@@ -1,45 +1,33 @@
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
-
-
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
+  <!-- Meta tags for social media banners -->
   <meta name="description" content="DESCRIPTION META TAG">
   <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
   <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
-
   <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
   <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
+
   <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
   <title>ADNet</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -48,18 +36,52 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <!-- Small CSS add-ons for a cleaner benchmark table -->
+  <style>
+    .single-image-section .single-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .caption {
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+      color: #666;
+    }
+    .benchmark-table th, .benchmark-table td {
+      text-align: center !important;
+      vertical-align: middle !important;
+      white-space: nowrap;
+    }
+    .benchmark-table td.method {
+      text-align: left !important;
+      white-space: normal;
+      min-width: 180px;
+    }
+    .benchmark-table thead th {
+      background: #fafafa;
+    }
+    .benchmark-note {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.75rem;
+    }
+  </style>
 </head>
+
 <body>
+
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
-        
+
         <nav class="navbar" role="navigation" aria-label="main navigation">
           <div class="navbar-menu">
             <div class="navbar-start">
               <a class="navbar-item" href="ADNet.html">ADNet'26</a>
               <a class="navbar-item" href="MANTA.html">MANTA'25</a>
-              <a class="navbar-item" href="GrainBrain.html">GrainBrain'25</a> 
+              <a class="navbar-item" href="GrainBrain.html">GrainBrain'25</a>
               <a class="navbar-item" href="GrainSpace.html">GrainSpace'22</a>
               <a class="navbar-item" href="GrainSet.html">GrainSet'23</a>
               <a class="navbar-item" href="OODGrainSet.html">OOD-GrainSet'23</a>
@@ -67,220 +89,236 @@
             </div>
           </div>
         </nav>
-         
+
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">ADNet: A Large-Scale and Extensible Multi-Domain Benchmark for Anomaly Detection Across 380 Real-World Categories</h1>
+
+            <h1 class="title is-1 publication-title">
+              ADNet: A Large-Scale and Extensible Multi-Domain Benchmark for Anomaly Detection Across 380 Real-World Categories
+            </h1>
+
             <div class="is-size-5 publication-authors">
-              
-              
-              
-              
-                <!-- Paper authors -->
-                <span class="author-block">
-                  Hai Ling<sup>1,2</sup>,
-                </span>
-                <span class="author-block">
-                  Jia Guo<sup>3</sup>,
-                </span>
-                <span class="author-block">
-                  Zhulin Tao<sup>1*</sup>,
-                </span>
-                <span class="author-block">
-                  Yunkang Cao<sup>4</sup>,
-                </span>
-                <span class="author-block">
-                  Donglin Di<sup>3</sup>,
-                </span>
-                <span class="author-block">
-                  Hongyan Xu<sup>5</sup>,
-                </span>
-                <span class="author-block">
-                  Xiu Su<sup>5</sup>,
-                </span>
-                <span class="author-block">
-                  Yang Song<sup>6</sup>,
-                </span>
-                <span class="author-block">
-                  <a href="https://hellodfan.github.io/" target="_blank">Lei Fan</a><sup>6,2*</sup>
-                </span>
-              </div>
+              <span class="author-block">Hai Ling<sup>1,2</sup>,</span>
+              <span class="author-block">Jia Guo<sup>3</sup>,</span>
+              <span class="author-block">Zhulin Tao<sup>1*</sup>,</span>
+              <span class="author-block">Yunkang Cao<sup>4</sup>,</span>
+              <span class="author-block">Donglin Di<sup>3</sup>,</span>
+              <span class="author-block">Hongyan Xu<sup>5</sup>,</span>
+              <span class="author-block">Xiu Su<sup>5</sup>,</span>
+              <span class="author-block">Yang Song<sup>6</sup>,</span>
+              <span class="author-block">
+                <a href="https://hellodfan.github.io/" target="_blank">Lei Fan</a><sup>6,2*</sup>
+              </span>
+            </div>
 
-              <div class="is-size-5 publication-authors">
-                <span class="author-block">Arxiv 2025</span>
-                <span class="eql-cntrb"><small><br><sup>1</sup>Communication University of China,   </small><small><sup>2</sup>DZ Matrix,  
-                </small> <small><sup>3</sup>Tsinghua University,  </small> <small><sup>4</sup>Hunan University, </small> <small><sup>5</sup>Central South University, </small> <small><sup>6</sup>UNSW Sydney</small></span>
-                <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span>
-              </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Arxiv 2025</span>
+              <span class="eql-cntrb">
+                <small><br><sup>1</sup>Communication University of China, </small>
+                <small><sup>2</sup>DZ Matrix, </small>
+                <small><sup>3</sup>Tsinghua University, </small>
+                <small><sup>4</sup>Hunan University, </small>
+                <small><sup>5</sup>Central South University, </small>
+                <small><sup>6</sup>UNSW Sydney</small>
+              </span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span>
+            </div>
 
-              <div class="column has-text-centered">
-                <div class="publication-links">
-                      <!-- Arxiv PDF link -->
-                  <span class="link-block">
-                    <a href="https://arxiv.org/abs/2511.20169" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+
+                <!-- Arxiv link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2511.20169" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
                     <span>ArXiv</span>
                   </a>
                 </span>
+
+                <!-- Dataset link -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/linglingling009/ADNet/tree/main" target="_blank"
+                     class="external-link button is-normal is-rounded is-link">
+                    <span class="icon"><i class="fas fa-database"></i></span>
+                    <span>Datasets</span>
+                  </a>
+                </span>
+
+              </div>
             </div>
+
           </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section single-image-section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-half has-text-centered">
+          <img src="static/images/ADNet_main.png" alt="ADNet overview" class="single-image">
+          <p class="caption">
+            Overview of ADNet, covering 380 categories across five application domains.
+          </p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<section class="section single-image-section">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-half has-text-centered">
-        <!-- 图片 -->
-        <img src="static/images/ADNet_main.png" alt="Image description" class="single-image">
-        <!-- Caption -->
-        <p class="caption">
-          Overview of ADNet, covering 380 categories across five application domains.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Anomaly detection (AD) aims to identify defects using normal-only training data. Existing anomaly detection benchmarks (e.g., MVTec-AD with 15 categories) cover only a narrow range of categories, limiting the evaluation of cross-context generalization and scalability. 
-              We introduce ADNet, a large-scale, multi-domain benchmark comprising 380 categories aggregated from 49 publicly available datasets across Electronics, Industry, Agrifood, Infrastructure, and Medical domains. The benchmark includes a total of 196,294 RGB images, consisting of 116,192 normal samples for training and 80,102 test images, of which 60,311 are anomalous. All images are standardized with MVTec-style pixel-level annotations and structured text descriptions spanning both spatial and visual attributes, enabling multimodal anomaly detection tasks. 
+  <!-- Abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Anomaly detection (AD) aims to identify defects using normal-only training data. Existing anomaly detection benchmarks (e.g., MVTec-AD with 15 categories) cover only a narrow range of categories, limiting the evaluation of cross-context generalization and scalability.
+              We introduce ADNet, a large-scale, multi-domain benchmark comprising 380 categories aggregated from 49 publicly available datasets across Electronics, Industry, Agrifood, Infrastructure, and Medical domains. The benchmark includes a total of 196,294 RGB images, consisting of 116,192 normal samples for training and 80,102 test images, of which 60,311 are anomalous. All images are standardized with MVTec-style pixel-level annotations and structured text descriptions spanning both spatial and visual attributes, enabling multimodal anomaly detection tasks.
               Extensive experiments reveal a clear scalability challenge: existing state-of-the-art methods achieve 90.6% I-AUROC in one-for-one settings but drop to 78.5% when scaling to all 380 categories in a multi-class setting.
               To this end, we propose Dinomaly<sup>m</sup>, a context-guided Mixture-of-Experts extension of Dinomaly that expands decoder capacity without added inference cost. It achieves 83.2% I-AUROC and 93.1% P-AUROC, demonstrating superior performance over existing approaches.
               We aim to make ADNet a standardized and extensible benchmark, supporting the community in expanding anomaly detection datasets across diverse domains and providing a scalable foundation for AD foundation models.
-          </p>
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+  </section>
 
 
+  <!-- Dataset Information -->
+  <section class="section" id="dataset-info">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-eight-fifths">
+          <h2 class="title is-3 has-text-centered">Dataset Information</h2>
 
+          <div class="content has-text-justified">
+            <p>
+              The ADNet dataset provides a comprehensive collection of high-quality images for anomaly detection.
+              It includes over 196,294 RGB images, consisting of 116,192 normal samples for training and 80,102 test images, of which 60,311 are anomalous.
+              The dataset supports tasks such as anomaly detection.
+            </p>
 
+            <p>
+              <strong>
+                The ADNet dataset is licensed under the Creative Commons BY-NC-SA 4.0 license. Note that all data must not be used for commercial purposes.
+              </strong>
+            </p>
 
+            <h3 class="title is-4 has-text-centered" style="margin-top: 2.5rem;">Dataset Access</h3>
+            <p class="has-text-centered" style="font-size: 0.95rem;">
+              ADNet is released on HuggingFace:
+            </p>
 
-<section class="section" id="dataset-info">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-eight-fifths">
-        <h2 class="title is-3 has-text-centered">Dataset Information</h2>
-        <div class="content has-text-justified">
-          <p>
-            The ADNet dataset provides a comprehensive collection of high-quality images for anomaly detection. 
-            It includes over 196,294 RGB images, consisting of 116,192 normal samples for training and 80,102 test images, of which 60,311 are anomalous.
-            The dataset supports tasks such as anomaly detection.
-          </p>
-          <p>
-            <strong> 
-            The ADNet dataset is licensed under the Creative Commons BY-NC-SA 4.0 license. Note that All data must not be used for commercial purposes.
-          </strong>
-          </p>
-
-          <h3 class="title is-4 has-text-centered" style="margin-top: 2rem;">Open-source Plan</h3>
-          <p class="has-text-centered">
-            Our open-source roadmap is as follows. We will update the status here as we make progress.
-          </p>
-          <p class="has-text-centered" style="font-size: 0.9rem; color: #666;">
-            The open-source release is tentatively planned to start after the submitted paper receives a preliminary acceptance decision (e.g., major or minor revision), depending on publisher and institutional requirements.
-          </p>
-
-          <div class="open-source-plan">
-            <div class="open-source-plan-timeline">
-              <div class="open-source-plan-item">
-                <div class="open-source-plan-icon is-planned">
-                  <i class="fas fa-rocket"></i>
-                </div>
-                <div class="open-source-plan-header">
-                  <span class="open-source-plan-phase">Phase 1</span>
-                  <span class="tag is-success is-light is-rounded open-source-plan-status">Planned</span>
-                </div>
-                <p class="open-source-plan-text">
-                  Open-source ADNet image data for one representative domain.
-                </p>
-              </div>
-
-              <div class="open-source-plan-arrow">
-                <i class="fas fa-arrow-right"></i>
-              </div>
-
-              <div class="open-source-plan-item">
-                <div class="open-source-plan-icon is-planned">
-                  <i class="fas fa-file-alt"></i>
-                </div>
-                <div class="open-source-plan-header">
-                  <span class="open-source-plan-phase">Phase 2</span>
-                  <span class="tag is-info is-light is-rounded open-source-plan-status">Planned</span>
-                </div>
-                <p class="open-source-plan-text">
-                  Open-source text labels and annotations (e.g., descriptions and attributes) for released domains.
-                </p>
-              </div>
-
-              <div class="open-source-plan-arrow">
-                <i class="fas fa-arrow-right"></i>
-              </div>
-
-              <div class="open-source-plan-item">
-                <div class="open-source-plan-icon is-planned">
-                  <i class="fas fa-flag-checkered"></i>
-                </div>
-                <div class="open-source-plan-header">
-                  <span class="open-source-plan-phase">Phase 3</span>
-                  <span class="tag is-info is-light is-rounded open-source-plan-status">Planned</span>
-                </div>
-                <p class="open-source-plan-text">
-                  Open-source ADNet data for all remaining domains.
-                </p>
-              </div>
+            <div class="has-text-centered" style="margin-top: 1rem;">
+              <a href="https://huggingface.co/datasets/linglingling009/ADNet/tree/main"
+                 target="_blank"
+                 class="external-link button is-medium is-rounded is-link">
+                <span class="icon"><i class="fas fa-external-link-alt"></i></span>
+                <span>Open on HuggingFace</span>
+              </a>
             </div>
-          </div>
 
-          <h3 class="title is-4 has-text-centered" style="margin-top: 2.5rem;">Dataset Access & Registration</h3>
-          <p class="has-text-centered" style="font-size: 0.95rem;">
-            Download ADNet (Coming Soon). Registration is required and you will be notified when the dataset becomes available.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- All categories image (PNG) -->
+  <section class="section single-image-section" id="all-categories">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-half has-text-centered">
+          <img src="static/images/ADNetall.png" alt="All categories overview" class="single-image">
+          <p class="caption">
+            All categories overview of ADNet.
           </p>
-          <div class="has-text-centered" style="margin-top: 1rem;">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScBllCFJBel3KDTBpfjgX-QKm_8APSdtwZKh3zkRTHf84KWMg/viewform?usp=dialog"
-               target="_blank"
-               class="external-link button is-medium is-rounded is-link is-light">
-              <span class="icon">
-                <i class="fas fa-download"></i>
-              </span>
-              <span>
-                Download ADNet (Coming Soon)
-              </span>
-            </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Baseline results table (MVTec-style columns, mean-only) -->
+  <section class="section" id="baseline-results">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <h2 class="title is-3 has-text-centered">Baseline Results</h2>
+
+          <div class="content">
+            <div class="table-container">
+              <table class="table is-fullwidth is-striped is-hoverable is-narrow benchmark-table">
+                <thead>
+                  <tr>
+                    <th>Method</th>
+                    <th>mAU-ROC<sub>I</sub></th>
+                    <th>mAP<sub>I</sub></th>
+                    <th>m<em>F</em>1-max<sub>I</sub></th>
+                    <th>mAU-ROC<sub>P</sub></th>
+                    <th>mAP<sub>P</sub></th>
+                    <th>m<em>F</em>1-max<sub>P</sub></th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td class="method"><a href="https://github.com/zhiyuanyou/UniAD" target="_blank">UniAD</a></td>
+                    <td>63.4</td><td>81.5</td><td>85.8</td><td>86.7</td><td>11.8</td><td>17.4</td>
+                  </tr>
+                  <tr>
+                    <td class="method"><a href="https://zhangzjn.github.io/projects/ViTAD" target="_blank">ViTAD</a></td>
+                    <td>72.4</td><td>86.3</td><td>87.9</td><td>88.1</td><td>19.6</td><td>24.4</td>
+                  </tr>
+                  <tr>
+                    <td class="method"><a href="https://github.com/hq-deng/RD4AD" target="_blank">RD</a></td>
+                    <td>66.9</td><td>83.2</td><td>86.4</td><td>87.4</td><td>15.7</td><td>21.2</td>
+                  </tr>
+                  <tr>
+                    <td class="method"><a href="https://github.com/DonaldRR/SimpleNet" target="_blank">SimpleNet</a></td>
+                    <td>52.7</td><td>75.9</td><td>84.0</td><td>65.0</td><td>3.9</td><td>7.5</td>
+                  </tr>
+                  <tr>
+                    <td class="method"><a href="https://github.com/lewandofskee/MambaAD" target="_blank">MambaAD</a></td>
+                    <td>72.7</td><td>87.0</td><td>87.8</td><td>88.8</td><td>20.7</td><td>25.8</td>
+                  </tr>
+                  <tr>
+                    <td class="method"><a href="https://github.com/apple/ml-destseg" target="_blank">DesTSeg</a></td>
+                    <td>63.9</td><td>81.9</td><td>85.6</td><td>81.0</td><td>14.0</td><td>16.4</td>
+                  </tr>
+                  <tr>
+                  <td class="method">
+                    <a href="https://github.com/guojiajeremy/Dinomaly" target="_blank">Dinomaly</a>
+                  </td>
+                  <td><u>78.5</u></td><td><u>89.7</u></td><td><u>89.9</u></td>
+                  <td><u>91.0</u></td><td><u>23.9</u></td><td><u>29.6</u></td>
+                  </tr>
+                  <tr>
+                    <td class="method"><strong>Dinomaly<sup>m</sup></strong></td>
+                    <td><strong>83.2</strong></td><td><strong>92.1</strong></td><td><strong>91.7</strong></td>
+                    <td><strong>93.1</strong></td><td><strong>30.6</strong></td><td><strong>35.6</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="benchmark-note">
+              Mean metrics are extracted from the provided ADNET_BASELINE.xlsx (Overall row). Best in <strong>bold</strong>, second best in <u>underline</u>.
+            </p>
           </div>
 
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
