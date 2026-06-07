@@ -67,6 +67,17 @@
       color: #666;
       margin-top: 0.75rem;
     }
+    .result-downloads {
+      margin-top: 1.5rem;
+    }
+    .result-downloads .button {
+      margin: 0.25rem;
+    }
+    .result-downloads .csv-caption {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 0.75rem;
+    }
   </style>
 </head>
 
@@ -142,6 +153,15 @@
                      class="external-link button is-normal is-rounded is-link">
                     <span class="icon"><i class="fas fa-database"></i></span>
                     <span>Datasets</span>
+                  </a>
+                </span>
+
+                <!-- Results CSV link -->
+                <span class="link-block">
+                  <a href="#result-csvs"
+                     class="external-link button is-normal is-rounded is-info">
+                    <span class="icon"><i class="fas fa-table"></i></span>
+                    <span>Results CSV</span>
                   </a>
                 </span>
 
@@ -310,9 +330,28 @@
               </table>
             </div>
 
-            <p class="benchmark-note">
-              Mean metrics are extracted from the provided ADNET_BASELINE.xlsx (Overall row). Best in <strong>bold</strong>, second best in <u>underline</u>.
-            </p>
+            <div id="result-csvs" class="result-downloads has-text-centered">
+              <p class="csv-caption">
+                Per-category CSV files for ADNet baseline results.
+              </p>
+              <div class="buttons is-centered">
+                <a href="static/csv/ADNet_main_table_multiclass_380.csv" target="_blank" download
+                   class="button is-small is-rounded is-info">
+                  <span class="icon"><i class="fas fa-table"></i></span>
+                  <span>Multi-class per-category</span>
+                </a>
+                <a href="static/csv/ADNet_main_table_oneclass_380.csv" target="_blank" download
+                   class="button is-small is-rounded is-link">
+                  <span class="icon"><i class="fas fa-table"></i></span>
+                  <span>One-class per-category</span>
+                </a>
+                <a href="static/csv/ADNet_per_category_single_vs_all380.csv" target="_blank" download
+                   class="button is-small is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-table"></i></span>
+                  <span>Dinomaly<sup>m</sup> single vs all-380</span>
+                </a>
+              </div>
+            </div>
           </div>
 
         </div>
