@@ -105,20 +105,19 @@
           <div class="column has-text-centered">
 
             <h1 class="title is-1 publication-title">
-              ADNet: A Large-Scale and Extensible Multi-Domain Benchmark for Anomaly Detection Across 380 Real-World Categories
+              ADNet: A Multi-Domain Benchmark for Anomaly Detection Across 380 Real-World Categories
             </h1>
 
             <div class="is-size-5 publication-authors">
               <span class="author-block">Hai Ling<sup>1,2</sup>,</span>
               <span class="author-block">Jia Guo<sup>3</sup>,</span>
               <span class="author-block">Zhulin Tao<sup>1*</sup>,</span>
-              <span class="author-block">Yunkang Cao<sup>4</sup>,</span>
-              <span class="author-block">Donglin Di<sup>3</sup>,</span>
-              <span class="author-block">Hongyan Xu<sup>5</sup>,</span>
-              <span class="author-block">Xiu Su<sup>5</sup>,</span>
-              <span class="author-block">Yang Song<sup>6</sup>,</span>
+              <span class="author-block">Donglin Di<sup>2,3</sup>,</span>
+              <span class="author-block">Hongyan Xu<sup>4</sup>,</span>
+              <span class="author-block">Xiu Su<sup>4</sup>,</span>
+              <span class="author-block">Yang Song<sup>5</sup>,</span>
               <span class="author-block">
-                <a href="https://hellodfan.github.io/" target="_blank">Lei Fan</a><sup>6,2*</sup>
+                <a href="https://hellodfan.github.io/" target="_blank">Lei Fan</a><sup>5,2*</sup>
               </span>
             </div>
 
@@ -128,9 +127,8 @@
                 <small><br><sup>1</sup>Communication University of China, </small>
                 <small><sup>2</sup>DZ Matrix, </small>
                 <small><sup>3</sup>Tsinghua University, </small>
-                <small><sup>4</sup>Hunan University, </small>
-                <small><sup>5</sup>Central South University, </small>
-                <small><sup>6</sup>UNSW Sydney</small>
+                <small><sup>4</sup>Central South University, </small>
+                <small><sup>5</sup>UNSW Sydney</small>
               </span>
               <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span>
             </div>
@@ -199,10 +197,10 @@
           <div class="content has-text-justified">
             <p>
               Anomaly detection (AD) aims to identify defects using normal-only training data. Existing anomaly detection benchmarks (e.g., MVTec-AD with 15 categories) cover only a narrow range of categories, limiting the evaluation of cross-context generalization and scalability.
-              We introduce ADNet, a large-scale, multi-domain benchmark comprising 380 categories aggregated from 49 publicly available datasets across Electronics, Industry, Agrifood, Infrastructure, and Medical domains. The benchmark includes a total of 196,294 RGB images, consisting of 116,192 normal samples for training and 80,102 test images, of which 60,311 are anomalous. All images are standardized with MVTec-style pixel-level annotations and structured text descriptions spanning both spatial and visual attributes, enabling multimodal anomaly detection tasks.
+              We introduce ADNet, a large-scale, multi-domain benchmark comprising 380 categories aggregated from 49 publicly available datasets across Electronics, Industry, Agrifood, Infrastructure, and Medical domains. The benchmark includes a total of 196,294 RGB images, consisting of 116,192 normal samples for training and 80,102 test images, of which 60,311 are anomalous. All images are standardized with MVTec-style pixel-level annotations, and anomalous samples are further enriched with structured text descriptions spanning both spatial and visual attributes, enabling multimodal anomaly detection tasks.
               Extensive experiments reveal a clear scalability challenge: existing state-of-the-art methods achieve 90.6% I-AUROC in one-for-one settings but drop to 78.5% when scaling to all 380 categories in a multi-class setting.
-              To this end, we propose Dinomaly<sup>m</sup>, a context-guided Mixture-of-Experts extension of Dinomaly that expands decoder capacity without added inference cost. It achieves 83.2% I-AUROC and 93.1% P-AUROC, demonstrating superior performance over existing approaches.
-              We aim to make ADNet a standardized and extensible benchmark, supporting the community in expanding anomaly detection datasets across diverse domains and providing a scalable foundation for AD foundation models.
+              To this end, we propose <strong>Dinomaly<sup>m</sup></strong>, a context-guided Mixture-of-Experts extension of Dinomaly that forms image-conditioned decoder feed-forward networks through convex combinations of expert parameter banks. It achieves 83.2% I-AUROC and 93.1% P-AUROC, outperforming existing approaches while maintaining measured latency close to vanilla Dinomaly.
+              We aim to make ADNet a standardized and extensible benchmark, supporting the community in expanding anomaly detection datasets across diverse domains and providing a scalable foundation for AD foundation models. Dataset: <a href="https://grainnet.github.io/ADNet" target="_blank">https://grainnet.github.io/ADNet</a>.
             </p>
           </div>
         </div>
@@ -246,21 +244,6 @@
             </div>
 
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- All categories image (PNG) -->
-  <section class="section single-image-section" id="all-categories">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-half has-text-centered">
-          <img src="static/images/ADNetall.png" alt="All categories overview" class="single-image">
-          <p class="caption">
-            All categories overview of ADNet.
-          </p>
         </div>
       </div>
     </div>
@@ -354,6 +337,37 @@
             </div>
           </div>
 
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        @article{ling2025adnet,
+          title={ADNet: A Multi-Domain Benchmark for Anomaly Detection Across 380 Real-World Categories},
+          author={Ling, Hai and Guo, Jia and Tao, Zhulin and Di, Donglin and Xu, Hongyan and Su, Xiu and Song, Yang and Fan, Lei},
+          journal={arXiv preprint arXiv:2511.20169},
+          year={2025}
+        }
+
+      </code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+  <!-- All categories image (PNG) -->
+  <section class="section single-image-section" id="all-categories">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-half has-text-centered">
+          <img src="static/images/ADNetall.png" alt="All categories overview" class="single-image">
+          <p class="caption">
+            All categories overview of ADNet.
+          </p>
         </div>
       </div>
     </div>
